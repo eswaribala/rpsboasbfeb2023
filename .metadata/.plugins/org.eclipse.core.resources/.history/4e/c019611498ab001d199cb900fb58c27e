@@ -41,7 +41,7 @@ public class IndividualService {
     
  //update
     
-    public Individual updateIndividual(Individual individual) {
+    public Individual addIndividual(Individual individual) {
     	if(getIndividualById(individual.getCustomerId())!=null)
     	   	
     	  return this.individualRepo.save(individual);
