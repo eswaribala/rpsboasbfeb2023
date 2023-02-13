@@ -17,7 +17,6 @@ import lombok.experimental.SuperBuilder;
 @Entity
 @Table(name="Individual")
 @SuperBuilder
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Individual extends Customer{
