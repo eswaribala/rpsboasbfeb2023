@@ -1,0 +1,6 @@
+package com.boa.customerapi.models;
+
+[Owned]
+public class FullName {
+
+}

@@ -1,0 +1,8 @@
+package com.boa.customerapi.models;
+
+import javax.persistence.Embeddable;
+
+@Embeddable
+public class FullName {
+
+}

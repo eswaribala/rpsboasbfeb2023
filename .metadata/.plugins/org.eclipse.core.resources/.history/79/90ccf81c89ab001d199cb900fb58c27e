@@ -1,0 +1,13 @@
+package com.boa.customerapi.models;
+
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+
+@Embeddable
+public class FullName {
+
+	@Column(name="First_Name",length = 50,nullable = false)
+	private String firstName;
+	private String lastName;
+	private String middleName;
+}

@@ -1,0 +1,9 @@
+package com.boa.customerapi.models;
+
+import javax.persistence.Entity;
+
+@Entity
+@Table("Customer")
+public class Customer {
+
+}
