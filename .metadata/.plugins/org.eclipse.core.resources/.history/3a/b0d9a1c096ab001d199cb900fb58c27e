@@ -1,0 +1,10 @@
+package com.boa.customerapi.services;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class IndividualService {
+
+	private IndividualRepo individualRepo;
+	
+}
