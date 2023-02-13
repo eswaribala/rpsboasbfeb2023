@@ -2,6 +2,7 @@ package com.boa.customerapi.models;
 
 import java.time.LocalDate;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -22,8 +23,10 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor
 public class Individual extends Customer{
 	@Enumerated(EnumType.STRING)
+	@Column(name="Gender")
 	private Gender gender;
 	@DateTimeFormat(iso = ISO.DATE)
+	  @Column(name="DOB")
 	private LocalDate dob;
 
 }

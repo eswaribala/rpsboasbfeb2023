@@ -2,25 +2,28 @@ package com.boa.customerapi.models;
 
 import java.time.LocalDate;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Table;
 
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
-
 @Entity
-@Table(name="Corporate")
+@Table(name="Individual")
 @SuperBuilder
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Corporate extends Customer{
-    @Column(name="Company_Type")
-    @Enumerated(EnumType.STRING)
-	private CompanyType companyType;
+public class Individual extends Customer{
+	@Enumerated(EnumType.STRING)
+	private Gender gender;
+	@DateTimeFormat(iso = ISO.DATE)
+	private LocalDate dob;
+
 }
