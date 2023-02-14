@@ -1,0 +1,12 @@
+package com.boa.customerapi.queries;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.boa.customerapi.services.IndividualService;
+import com.coxautodev.graphql.tools.GraphQLQueryResolver;
+@Component
+public class IndividualGLQuery implements GraphQLQueryResolver {
+	@Autowired
+	private IndividualService individualService;
+
+}

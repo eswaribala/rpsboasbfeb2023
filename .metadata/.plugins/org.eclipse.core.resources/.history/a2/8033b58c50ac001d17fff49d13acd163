@@ -1,0 +1,7 @@
+package com.boa.customerapi.queries;
+
+import com.coxautodev.graphql.tools.GraphQLQueryResolver;
+
+public class IndividualGLQuery implements GraphQLQueryResolver {
+
+}
