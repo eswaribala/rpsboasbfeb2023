@@ -48,5 +48,10 @@ public class IndividualService {
     	else
     		return this.individualRepo.save(individual);
     }
+    
+    //non primary key
+    public List<Individual> findAllByEmailId(String email){
+    	return this.individualRepo.findByEmail(email);
+    }
 	
 }
