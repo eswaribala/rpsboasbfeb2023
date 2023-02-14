@@ -73,7 +73,7 @@ public class IndividualService {
     	AbstractQuery<Individual> cq=cb.createQuery(Individual.class);
     	
     	Root<Individual> individualObject=cq.from(Individual.class);
-    	cq.where(cb.equal(individualObject.get("name").<String> get("firstName") ,firstName));
+    	cq.where(cb.equal(individualObject.get("name.firstName"),firstName));
     	
     	CriteriaQuery<Individual> selectResult=((CriteriaQuery<Individual>)cq).select(individualObject);
     	TypedQuery<Individual> tq=entityManager.createQuery(selectResult);
