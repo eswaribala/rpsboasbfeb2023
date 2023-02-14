@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.boa.customerapi.dto.ResponseWrapper;
-import com.boa.customerapi.facades.CorporateFacade;
 import com.boa.customerapi.models.CompanyType;
 import com.boa.customerapi.models.Corporate;
 import com.boa.customerapi.services.CorporateService;
@@ -25,7 +24,7 @@ import com.boa.customerapi.services.CorporateService;
 @RequestMapping("/corporates")
 public class CorporateController {
     @Autowired
-	private CorporateFacade corporateService;
+	private CorporateService corporateService;
 	
     @PostMapping({"/v1.0/"})
     public ResponseEntity<ResponseWrapper> addCorporate(@RequestBody Corporate Corporate){
