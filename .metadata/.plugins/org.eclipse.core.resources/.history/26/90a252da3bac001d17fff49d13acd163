@@ -51,15 +51,9 @@ public class IndividualService {
  //update
     
     public Individual updateIndividual(Individual individual, long customerId) {
-    	
-    	Individual obj=null;
-    	if(getIndividualById(customerId)!=null) {
-    	 
-    		obj=getIndividualById(customerId);
-    		obj.setContactNo(individual.getContactNo());
-    		obj.setEmail(individual.getEmail());
-    	  return this.individualRepo.save(obj);
-    	}
+    	if(getIndividualById(customerId)!=null)
+    	   	
+    	  return this.individualRepo.save(individual);
     	else
     		return this.individualRepo.save(individual);
     }
