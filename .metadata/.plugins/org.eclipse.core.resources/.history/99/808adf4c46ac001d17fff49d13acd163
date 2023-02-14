@@ -59,7 +59,7 @@ public class CustomerSwaggerConfiguration {
                 .select()
                 .apis(RequestHandlerSelectors
                         .basePackage("com.boa.customerapi"))
-                .paths(PathSelectors.regex("/corporates/v1.0.*"))
+                .paths(PathSelectors.regex("/individuals/v1.0.*"))
                 .build()
                 .apiInfo(getApiInfo())
                 .forCodeGeneration(true)

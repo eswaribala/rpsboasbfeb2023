@@ -55,11 +55,11 @@ public class CustomerSwaggerConfiguration {
     @Bean
     public Docket apiCorporateDocket() {
         return new Docket(DocumentationType.SWAGGER_2)
-        		.groupName("corporate-api-1.0")
+        		.groupName("individual-api-1.0")
                 .select()
                 .apis(RequestHandlerSelectors
                         .basePackage("com.boa.customerapi"))
-                .paths(PathSelectors.regex("/corporates/v1.0.*"))
+                .paths(PathSelectors.regex("/individuals/v1.0.*"))
                 .build()
                 .apiInfo(getApiInfo())
                 .forCodeGeneration(true)
