@@ -50,8 +50,8 @@ public class IndividualService {
     
  //update
     
-    public Individual updateIndividual(Individual individual) {
-    	if(getIndividualById(individual.getCustomerId())!=null)
+    public Individual updateIndividual(Individual individual, long customerId) {
+    	if(getIndividualById(customerId)!=null)
     	   	
     	  return this.individualRepo.save(individual);
     	else
