@@ -3,7 +3,6 @@ package com.boa.customerapi.services;
 import java.util.List;
 
 import javax.persistence.EntityManager;
-import javax.persistence.TypedQuery;
 import javax.persistence.criteria.AbstractQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
@@ -70,8 +69,7 @@ public class IndividualService {
     	cq.where(cb.equal(individualObject.get("name.firstName"),firstName));
     	
     	CriteriaQuery<Individual> selectResult=((CriteriaQuery<Individual>)cq).select(individualObject);
-    	TypedQuery<Individual> tq=entityManager.createQuery(selectResult);
-    	return tq.getResultList();
+    	return this.individualRepo.findByEmail(email);
     }
     
 	
