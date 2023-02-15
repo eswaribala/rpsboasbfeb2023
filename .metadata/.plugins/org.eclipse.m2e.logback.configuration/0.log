@@ -1532,3 +1532,19 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.springfra
 2023-02-15 11:30:45,141 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
 2023-02-15 11:30:55,185 [Worker-58: Launching customerapi (9)] INFO  o.e.m.i.launch.MavenLaunchDelegate - F:\BOASBFeb2023\customerapi\customerapi
 2023-02-15 11:30:55,185 [Worker-58: Launching customerapi (9)] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -Dmaven.test.skip=true -DskipTests clean install
+2023-02-15 12:09:32,357 [Worker-74: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-02-15 12:09:32,360 [Worker-74: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2023-02-15 12:09:32,378 [Worker-74: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 3 resources
+2023-02-15 12:09:32,398 [Worker-74: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2023-02-15 12:09:32,398 [Worker-74: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory F:\BOASBFeb2023\customerapi\customerapi\src\test\resources
+2023-02-15 14:10:11,725 [Worker-99: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.boa:customerapi:0.0.1-SNAPSHOT @ F:\BOASBFeb2023\customerapi\customerapi\pom.xml.
+2023-02-15 14:10:14,278 [Worker-99: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-bus/2.2.2.RELEASE/spring-cloud-bus-2.2.2.RELEASE.pom
+2023-02-15 14:10:14,746 [Worker-99: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-bus/2.2.2.RELEASE/spring-cloud-bus-2.2.2.RELEASE.pom
+2023-02-15 14:10:15,413 [Worker-99: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-bus-parent/2.2.2.RELEASE/spring-cloud-bus-parent-2.2.2.RELEASE.pom
+2023-02-15 14:10:15,724 [Worker-99: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-bus-parent/2.2.2.RELEASE/spring-cloud-bus-parent-2.2.2.RELEASE.pom
+2023-02-15 14:10:16,075 [Worker-99: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-stream/3.0.6.RELEASE/spring-cloud-stream-3.0.6.RELEASE.pom
+2023-02-15 14:10:16,344 [Worker-99: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-stream/3.0.6.RELEASE/spring-cloud-stream-3.0.6.RELEASE.pom
+2023-02-15 14:10:16,583 [Worker-99: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-stream-parent/3.0.6.RELEASE/spring-cloud-stream-parent-3.0.6.RELEASE.pom
+2023-02-15 14:10:16,839 [Worker-99: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-stream-parent/3.0.6.RELEASE/spring-cloud-stream-parent-3.0.6.RELEASE.pom
+2023-02-15 14:10:17,102 [Worker-99: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/io/projectreactor/reactor-bom/Dysprosium-SR6/reactor-bom-Dysprosium-SR6.pom
+2023-02-15 14:10:17,358 [Worker-99: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/io/projectreactor/reactor-bom/Dysprosium-SR6/reactor-bom-Dysprosium-SR6.pom

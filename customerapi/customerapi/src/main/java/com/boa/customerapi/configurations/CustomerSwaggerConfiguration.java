@@ -80,7 +80,7 @@ public class CustomerSwaggerConfiguration {
                 "App to demonstrate API Documentation",
                 "0.0.1-SNAPSHOT",
                 "Terms of Service",
-                new Contact("Parameswari",
+                new Contact("Parameswari Bala",
                         "https://blog.eswari.in",
                         "parameswaribala@gmail.com"),
                 "OSS License",
