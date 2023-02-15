@@ -3,6 +3,7 @@ package com.boa.customerapi.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -18,11 +19,16 @@ import org.springframework.web.bind.annotation.RestController;
 import com.boa.customerapi.models.Individual;
 import com.boa.customerapi.services.IndividualService;
 
+import lombok.extern.slf4j.Slf4j;
+
 @RestController
 @RequestMapping("/individuals")
+@Slf4j
 public class IndividualController {
     @Autowired
 	private IndividualService individualService;
+    @Value("${message}")
+    private String message;
     
     @PostMapping({"/v1.0/"})
     @CrossOrigin("*")
@@ -41,6 +47,8 @@ public class IndividualController {
     @CrossOrigin("*")
     public List<Individual> getAllIndividuals(){
     
+       log.info("Message Received"+message);
+    	
     	return this.individualService.getAllIndividuals();
     	
     }
