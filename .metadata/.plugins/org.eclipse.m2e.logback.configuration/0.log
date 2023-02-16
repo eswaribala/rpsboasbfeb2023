@@ -2980,3 +2980,4 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.springfra
 2023-02-15 17:29:48,883 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
 2023-02-15 17:30:07,737 [Worker-133: Launching customerapi (14)] INFO  o.e.m.i.launch.MavenLaunchDelegate - F:\BOASBFeb2023\customerapi\customerapi
 2023-02-15 17:30:07,737 [Worker-133: Launching customerapi (14)] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B -Dmaven.test.skip=true -DskipTests clean install
+2023-02-16 10:00:48,055 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
