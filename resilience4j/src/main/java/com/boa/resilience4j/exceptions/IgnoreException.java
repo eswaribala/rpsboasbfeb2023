@@ -1,5 +1,4 @@
-package com.boa.resillience4j.exceptions;
+package com.boa.resilience4j.exceptions;
 
 public class IgnoreException extends Exception{
-
 }
