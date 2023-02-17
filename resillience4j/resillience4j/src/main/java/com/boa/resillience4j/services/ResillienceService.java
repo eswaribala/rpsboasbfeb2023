@@ -37,7 +37,7 @@ public class ResillienceService {
 	}
 	
     public String fallbackGetData(String userName,String userPwd,Exception ex) {
-    	log.info(" Making a request to " + serviceUrl + " at :"+ LocalDateTime.now());
+    	log.info(" Making a request to " + alternativeServiceUrl + " at :"+ LocalDateTime.now());
         
         return restTemplate.getForObject(alternativeServiceUrl, String.class);
 
