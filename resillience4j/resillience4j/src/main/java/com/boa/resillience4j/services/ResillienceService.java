@@ -8,6 +8,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import com.boa.resillience4j.vos.JwtRequest;
+
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import io.github.resilience4j.retry.annotation.Retry;
 import lombok.extern.slf4j.Slf4j;
@@ -27,15 +29,15 @@ public class ResillienceService {
     @CircuitBreaker(name = "gatewayCircuitBreaker", 
     		fallbackMethod = "fallbackGetData")
     @Retry(name = "gatewayRetry")
-	public String getData(String userName,String userPwd) {
+	public String getData(JwtRequest jwtRequest) {
 
         log.info(" Making a request to " + serviceUrl + " at :"+ LocalDateTime.now());
        
-        return restTemplate.getForObject(serviceUrl+"?userName="+userName+"&userPwd="+userPwd, String.class);
+        return restTemplate.getForObject(serviceUrl+"?userName="+jwtRequest.getUserName()+"&userPwd="+jwtRequest.getUserPwd(), String.class);
 
 	}
 	
-    public String fallbackGetData(String userName,String userPwd,Exception ex) {
+    public String fallbackGetData(JwtRequest jwtRequest,Exception ex) {
     	log.info(" Making a request to " + alternativeServiceUrl + " at :"+ LocalDateTime.now());
         
         return restTemplate.getForObject(alternativeServiceUrl, String.class);
