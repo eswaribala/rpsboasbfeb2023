@@ -19,6 +19,6 @@ public class Individual extends Customer{
 	
 	private Gender gender;
 
-	private LocalDate dob;
+	private String dob;
 
 }
