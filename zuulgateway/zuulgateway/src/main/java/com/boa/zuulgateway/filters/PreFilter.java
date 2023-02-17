@@ -15,6 +15,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import com.boa.zuulgateway.dtos.JwtRequest;
@@ -26,11 +27,11 @@ import com.github.wnameless.json.unflattener.JsonUnflattener;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
-
 import lombok.extern.slf4j.Slf4j;
 import net.minidev.json.JSONObject;
 import net.minidev.json.parser.JSONParser;
 @Slf4j
+@Component
 public class PreFilter extends ZuulFilter{
 
 	@Value("${authUrl}")
@@ -57,7 +58,7 @@ public class PreFilter extends ZuulFilter{
         log.info( servletRequest.getRemoteAddr());
         log.info("PreFilter: " + String.format("%s request to %s",  servletRequest.getMethod(), servletRequest.getRequestURL().toString()));
         
-        //http://localhost:8765/api/customers/individuals/v1.0?userName=eswari&userPwd=test@123
+        //http://localhost:8765/api/customers/individuals/v1.0/?userName=eswari&userPwd=test@123
         Map<String,List<String>> params=ctx.getRequestQueryParams();
          
         
