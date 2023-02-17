@@ -1,4 +1,4 @@
-package com.boa.customerapi;
+package com.boa.customerapikafka;
 
 import java.net.URI;
 import java.net.http.HttpClient;

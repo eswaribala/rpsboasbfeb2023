@@ -1,4 +1,4 @@
-package com.boa.customerapi.controllers;
+package com.boa.customerapikafka.controllers;
 
 
 
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.boa.customerapi.models.Individual;
-import com.boa.customerapi.services.IndividualService;
+import com.boa.customerapikafka.models.Individual;
+import com.boa.customerapikafka.services.IndividualService;
 
 import lombok.extern.slf4j.Slf4j;
 

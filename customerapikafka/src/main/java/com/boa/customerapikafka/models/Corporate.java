@@ -1,4 +1,4 @@
-package com.boa.customerapi.models;
+package com.boa.customerapikafka.models;
 
 import java.time.LocalDate;
 

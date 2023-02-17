@@ -1,4 +1,4 @@
-package com.boa.customerapi.models;
+package com.boa.customerapikafka.models;
 
 public enum CompanyType {
 PUBLIC,PRIVATE,NGO

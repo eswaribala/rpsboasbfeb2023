@@ -1,4 +1,4 @@
-package com.boa.customerapi.configurations;
+package com.boa.customerapikafka.configurations;
 
 import java.util.Collections;
 import java.util.Date;
