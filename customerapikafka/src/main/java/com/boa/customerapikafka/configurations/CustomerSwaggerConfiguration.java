@@ -36,7 +36,7 @@ public class CustomerSwaggerConfiguration {
         		.groupName("individual-api-1.0")
                 .select()
                 .apis(RequestHandlerSelectors
-                        .basePackage("com.boa.customerapi"))
+                        .basePackage("com.boa.customerapikafka"))
                 .paths(PathSelectors.regex("/individuals/v1.0.*"))
                 .build()
                 .apiInfo(getApiInfo())
