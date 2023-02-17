@@ -25,9 +25,8 @@ public class ResillienceService {
     
 
     @CircuitBreaker(name = "gatewayCircuitBreaker", 
-    		fallbackMethod = "fallback")
+    		fallbackMethod = "fallbackGetData")
     @Retry(name = "gatewayRetry")
-
 	public String getData(String userName,String userPwd) {
 
         log.info(" Making a request to " + serviceUrl + " at :"+ LocalDateTime.now());
