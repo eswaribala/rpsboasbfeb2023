@@ -25,15 +25,15 @@ public class Service {
     @CircuitBreaker(name = "gatewayCircuitBreaker", 
     		fallbackMethod = "fallback")
     @Retry(name = "gatewayRetry")
-    public String fetchData() {
+    public String fetchData(String userName,String userPwd) {
         log.info(" Making a request to " + serviceUrl + " at :" 
     + LocalDateTime.now());
 
        
-        return restTemplate.getForObject(serviceUrl, String.class);
+        return restTemplate.getForObject(serviceUrl+"?userName="+userName+"&userPwd="+userPwd, String.class);
     }
 
-    public String fallback(Exception e) {
+    public String fallback(String userName,String userPwd,Exception e) {
          return restTemplate.getForObject(alternativeServiceUrl, String.class);
     }
 }

@@ -12,8 +12,8 @@ public class Controller {
     @Autowired
     private Service service;
 
-    @GetMapping("/")
-    public String getValues() {
-        return service.fetchData();
+    @GetMapping({"/{userName}/{userPwd}"})
+    public String getValues(String userName,String userPwd) {
+        return service.fetchData(userName,userPwd);
     }
 }
